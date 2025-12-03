@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+  position: relative;
+  background-color: black;
+  padding-left: 120px;
+  font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 900;
+}
+h2{
+    font-size: 2rem;
+}
+h4{
+    font-size: 1.8rem;
+}
+
+h5 {
+    font-size: 1.4rem;
+}
+
+.small-nav{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    display: none;
+}
+
+.small-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.small-nav ul li {
+    padding: 20px;
+}
+
+.small-nav ul li:hover{
+    background-color: white;
+    cursor: pointer;
+}
+.small-nav ul li:hover a{
+    color: black;
+}
+.small-nav ul li:hover{
+    background-color: white;
+    cursor: pointer;
+}
+
+.small-nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar {
+  width: 120px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-color: #303030;
+}
+.side-image-container{
+    height: 120px;
+}
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sidebar nav ul {
+    width: 100%;
+}
+.sidebar nav ul li {
+  list-style-type: none;
+}
+.sidebar nav ul li a{
+  padding: 24px 0;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.6rem;
+}
+
+.active {
+    background-color: black;
+}
+
+main {
+  margin: auto;
+  padding: 0 20px;
+  width: 60%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  overflow: hidden;
+}
+
+.profile-section {
+  text-align: center;
+  padding-top: 40px;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.profile-section h1 {
+  font-size: 3rem;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+section h2 {
+  position: relative;
+}
+section h2::after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 150%;
+  left: 0;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skills > div .progress-bar {
+  margin-top: 12px;
+  background-color: #888;
+  width: 100%;
+  height: 18px;
+}
+
+.skills > div:nth-of-type(1) .progress-bar-inner {
+  background-color: white;
+  width: 95%;
+  height: 100%;
+}
+.skills > div:nth-of-type(2) .progress-bar-inner {
+  background-color: white;
+  width: 80%;
+  height: 100%;
+}
+
+.skills > div:nth-of-type(3) .progress-bar-inner {
+  background-color: white;
+  width: 70%;
+  height: 100%;
+}
+
+.stat-counter {
+  background-color: white;
+  color: black;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+}
+
+.stat-counter > div {
+  text-align: center;
+}
+
+.download-button button {
+  border: none;
+}
+.download-button button a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background-color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+}
+
+.download-button button a:hover {
+  background-color: #bbb;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.price > .prices {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+}
+
+.price > .prices div {
+  width: 49%;
+  background-color: white;
+  text-align: center;
+  opacity: 0.6;
+}
+
+.price .prices div:hover {
+  opacity: 1;
+}
+.price > .prices > div > p:nth-of-type(1) {
+  padding: 12px;
+  font-size: 2rem;
+  background-color: #888;
+}
+.price .prices div ul {
+  list-style-type: none;
+}
+.price .prices div ul li {
+  background-color: #ccc;
+  padding: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.price > .prices > div > ul > li > p:nth-of-type(1) {
+  padding: 12px;
+  font-size: 2rem;
+}
+.price > .prices > div > ul > li > button {
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+}
+
+.price > .prices > div > ul > li > button:hover {
+  background-color: black;
+  color: white;
+}
+
+.reputation {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.reputation > div {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.reputation > div > div > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.reputation > div > div:nth-of-type(2) {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.projects-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px 12px;
+}
+.projects {
+  width: 200px;
+  height: 200px;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact-section div ul {
+  list-style-type: none;
+}
+.contact-section div ul li {
+  padding: 12px 0;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-section > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-section div form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-section div form input {
+  padding: 12px;
+  border: none;
+  font-size: 1.2rem;
+}
+.contact-section div form button {
+  width: 200px;
+  padding: 12px;
+  border: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+footer {
+    margin: 12px auto;
+  margin-bottom: 40px;
+  width: 60%;
+  padding-left: 20px;
+}
+
+footer div ul {
+  display: flex;
+  gap: 12px;
+}
+
+footer div ul li svg:hover {
+  opacity: 0.6;
+}
+
+/* | Device type                    | Width        |
+| ------------------------------ | ------------ |
+| Extra small (mobile)           | **< 576px**  |
+| Small (large mobile / phablet) | **≥ 576px**  |
+| Medium (tablet)                | **≥ 768px**  |
+| Large (small laptop)           | **≥ 992px**  |
+| Extra large (desktop)          | **≥ 1200px** |
+| XXL desktop                    | **≥ 1400px** | */
+
+@media only screen and (max-width: 992px) {
+main{
+    width: 100%;
+    margin: 0 auto;
+}
+.projects-container{
+    grid-template-columns: repeat(3, 1fr);
+}
+.projects {
+    width: auto
+}
+footer{
+    width: 100%;
+}
+}
+
+@media only screen and (max-width: 576px) {
+    body{
+        padding: 0;
+    }
+    .small-nav{
+        display: block;
+    }
+    .sidebar{
+        display: none;
+    }
+    .stat-counter{
+        flex-direction: column;
+    }
+    .stat-counter div {
+        padding: 24px;
+    }
+    .price .prices {
+        flex-direction: column;
+        width: 100%;
+        gap: 24px
+    }
+    .price .prices div {
+        width: 100%;
+    }
+    .projects-container{
+        grid-template-columns: auto;
+    }
+}
+
